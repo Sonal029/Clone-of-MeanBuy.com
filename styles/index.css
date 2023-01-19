@@ -7,8 +7,13 @@ body{
     line-height: 15px;
     max-width: 1500px;
     align-content: center;
-}
+    color: #171e28;
 
+}
+html{
+    scroll-behavior: smooth;
+    
+}
 .nav-belt{
     padding-top: 10px;
     display: flex;
@@ -41,18 +46,21 @@ body{
 }
 .select-bar{
     position: relative;
+    
     left: 6%;
     border-radius: 3px;
     border: 0px solid #fefefe;
+    /* border: 5px solid black; */
     height: 60px;
     width: 20px;
     appearance: none;
     height: 35px;
     border: 0px;
     outline: none;
-    color: #fefefe;
-
+    /* color: black */
+color: #171e28;
 }
+
 
 .input-bar{
     width: 550px;
@@ -61,9 +69,12 @@ body{
     padding: 2px;
     box-sizing: border-box;
     border-radius: 5px;
-    color: #fefefe;
+    /* color: #fefefe; */
+    color: #171e28;
 }
-
+.input-bar{
+    padding-left: 50px;
+}
 .select-bar:hover{
 border: 0px solid #fefefefe;
  }
@@ -131,7 +142,12 @@ border: 0px solid #fefefefe;
     padding-left: auto;
     padding-right: auto;  
 }
-
+#Headersection{
+    position: sticky;
+    top: 0%;
+     z-index: 5;
+    /* max-width: inherit; */
+}
 .cart-logo{
 margin-top: 15px;
 padding-left: 10px;
@@ -164,8 +180,7 @@ padding-left: 10px;
     height: 5px;
 }
 .offerImage img{
-margin-left: 70px;
-    
+margin-left: 70px;  
 }
 /* header ends here */
 
@@ -212,7 +227,17 @@ background-image: linear-gradient(to bottom,
     text-align: center;
     background-color: #42556c;
     color: rgba(255, 255, 255, 0.867);
+    text-decoration: none;
 }
+.back-to-top a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fefefe;
+    scroll-behavior: smooth;
+
+}
+
+
 /* slider ends here */
 
 /* footer starts here */
@@ -403,8 +428,14 @@ background-color: #fefefe;
     line-height: 1;
     margin-bottom: 10px;
     border-radius:5px ;
-  
+  text-decoration: none;
+  color: black;
 }
+.sigin-in a{
+    text-decoration: none;
+    color: black;
+}
+
 .sub-cards-div-1 >p{
     width: 94%;
     font-size: 13px;
@@ -481,17 +512,22 @@ background-color: #fefefe;
 height: 300px;
 width: 300px;
 }
-/* ------------------------------------------------- */
+
+/* --------section- 5- css starts----------------------------------------- */
 .sec-start{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 .swiper-wrapper-1{
-  display: grid;
+  /* display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 15.5%;
-  overflow-x: auto;
+  overflow-x: auto; */
+  display: flex;
+  column-gap: 20px;
+  position: relative;
+  transition: all 1s;
 }
 .swiper-slide-1 {
     text-align: center;
@@ -507,6 +543,14 @@ width: 300px;
     height: 100%; */
   
   }
+  .blockbusterDeals{
+    display: flex;
+    }
+    .blockbusterDeals span{
+        padding-top: 18px;
+        padding-left: 20px;
+        cursor: pointer;
+    }
 /* -------------------------------------------	 */
 .sec-start-1{
     width: 90%;
@@ -514,16 +558,17 @@ width: 300px;
     margin-right: auto;
 }
 .swiper-wrapper-2{
-    display: grid;
+    /* display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 14%;
+    grid-auto-columns: 14%; */
+    display: flex;
     column-gap: 20px;
-    overflow-x: auto;
+    position: relative;
+    transition: all 1s;
   }
   .swiper-slide-2 img {
     display: flex;
     column-gap: 20px;
-
   }
   .swiper-slide-2{
     gap: 20px;
@@ -532,6 +577,14 @@ width: 300px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .starting49{
+    display: flex;
+  }
+  .starting49 span{
+    padding-top: 18px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
  /* ------------------------------------------------------------------- */
  .sec-start-2{
     width: 90%;
@@ -539,17 +592,22 @@ width: 300px;
     margin-right: auto;
 }
 .swiper-wrapper-3{
-    display: grid;
+    /* display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 14%;
     column-gap: 20px;
-    overflow-x: auto;
+    overflow-x: auto; */
+    display: flex;
+    column-gap: 20px;
+    position: relative;
+    transition: all 1s;
+    
   }
   .swiper-slide-3 img {
     display: flex;
     column-gap: 20px;
-    width: 100%;
-    height: 200px;
+    /* width: 100%;
+    height: 200px; */
 
   }
   .swiper-slide-3{
@@ -559,8 +617,237 @@ width: 300px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
+  .upto40{
+    display: flex;
+  }
+  .upto40 span{
+    padding-top: 18px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+/* --------------------------------------- */
 
-	
+.big-banner{
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+}
+/* ---------------------------------------------------- */
+
+.sec-start-3{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-wrapper-4{
+    display: flex;
+    column-gap: 20px;
+    position: relative;
+    transition: all 1s;
+    
+  }
+  .swiper-slide-4 img {
+    display: flex;
+    column-gap: 20px;
+    /* width: 100%;
+    height: 200px; */
+
+  }
+  .swiper-slide-4{
+    gap: 20px;
+  }
+  .section-10   {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+/* ------------------------------------------------------ */
+.big-banner-1{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+}
+/* -------------------------------------------------------------- */
+
+.signin-section-1{
+    width: 80%;
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+}
+.sig-in-1{
+    text-align: center;
+    width: 22%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    border: 1px solid #e8a805;
+    background-color: #e8a805;
+    cursor: pointer;
+}
+.sig-in-1 a{
+text-decoration: none;
+color: black;
+}
+/* -------------------------------------------------------------- */
+.greatdeals{
+    display: flex;
+  }
+  .greatdeals span{
+    padding-top: 18px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+/* --------------------------------------------------------------------------------------- */
+.upto40off{
+    display: flex;
+  }
+  .upto40off span{
+    padding-top: 18px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+/* ---------------------------------------------------------------------------------- */
+.Shopdetails{
+    display: flex;
+  }
+.Shopdetails span{
+    padding-top: 18px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+/* ------------------------------------------------------------------------------------ */
+.chevon-left{
+position: absolute;
+flex-basis: 100%;
+justify-content: center;
+align-items: center;
+top: 25%;
+left: 0%;
+width: 40px;
+height: 100px;
+
+font-size: large;
+border: 0px solid #fefefe;
+opacity: .7;
+transition-delay: 2s;
+z-index: 1;
+}
+
+.chevon-right{
+position: absolute;
+flex-basis: 100%;
+top: 25%;
+right: 0%;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 100px;
+
+font-size: large;
+border: 0px solid #fefefe;
+opacity: .7;
+}
+/* --------------------------------------------------------------------------------------- */
+.swiper-wrapper-4{
+    /* display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 14%; */
+    display: flex;
+    column-gap: 20px;
+    position: relative;
+    transition: all 1s;
+  }
+
+/* ----------------------------------------------------------------- */
+.ul-li ul li{
+    color: black;
+    list-style: none;
+    line-height: 1.3;
+    cursor: pointer;
+}
+.ul-li{
+    display: flex;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin-left: 60%;    */
+}
+.outerBorder{
+    width:35%;
+    position: absolute;
+    top: 08%;
+    right: 10%;
+    z-index: 5;
+    border-radius: 5px;
+    background-color: #fefefeef;
+    font-size: 12px;
+
+}
+.sigin_section{
+  text-align: center;
+  text-decoration: none;
+}
+.si{
+    width: 40%;
+    padding: 6px;
+    border-radius:5px;
+    background-color: #e8a805;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #e8a805;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.ul-li ul li h4{
+   font-size: 14px;
+}
+.Signinghover{
+    display: none;
+    /* position: relative; */
+}
+/* ------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -10,10 +10,10 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
    
 </head>
-<body>
+<body id="mainBody">
     <!-- header starts from here... -->
-    <header>
-        <div class="nav-belt">
+    <header id="Headersection">
+        <div class="nav-belt" id="nav-belts">
             <div class="image-section">
                 <img src="../logo/logo6.png" alt="companylogo">
             </div>
@@ -24,6 +24,9 @@
                     <span style="font-size: 14px;">Select your address</span>
                 </div>
             </div>
+          
+
+
             <div class="search-bar">
                 <select name="products"  id="products" class="select-bar">
                     <option value="all">All</option>
@@ -57,7 +60,7 @@
               <div class="lang-sec"><span>EN</span></div>
             </div>
             <div class="login-orders-cart">
-                <div class="login">
+                <div class="login" onmouseenter="show()" onmouseleave="hide()">
                     <span style="font-weight: 300;">Hello,<span>sign in</span></span><br>
                     <span style="font-size: 14px;">Account & Lists </span>
                 </div>
@@ -68,7 +71,7 @@
             <div>
                 <div class="cart">
                     <div class="count">
-                        <span style="font-size: 18px; font-weight: bolder; padding-left: 10px;">0</span>
+                        <span style="font-size: 20px; font-weight: bolder; padding-left: 15px; padding-top: -5px;">0</span>
                     </div>
                     <div class="cart-logo">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -77,32 +80,68 @@
             </div>
         </div>
      </div>
-     <nav>
-        <div class="main-nav">
-           <div class="main-1">
-            <!-- <div class="hambuger">
-                
-            </div> -->
-           <div class="list-items">
-            <ul class="li-lists">
-                <li><i class="fa fa-bars" aria-hidden="true"></i></li>
-                <li>All</li>
-                <li>ShoppingRoom miniTV</li>
-                <li>Best Sellers</li>
-                <li>Mobiles</li>
-                <li>Today's Deals</li>
-                <li>Customer Service</li>
-                <li> Electronics </li>
-                <li>Prime</li>
-                <li>Fashion</li>
-                <li>SR Pay</li>
-            </ul>
-           </div> 
-           <div class="offerImage"><img src="https://m.media-amazon.com/images/G/31/Events/img23/JanART/SWM_400x39_Live_Now._CB615689570_.jpg" alt=""></div>
-           </div>
-        </div>
-     </nav>
+   
 </header>
+<nav>
+  <div class="main-nav">
+     <div class="main-1">
+      <!-- <div class="hambuger">
+          
+      </div> -->
+     <div class="list-items">
+      <ul class="li-lists">
+          <li><i class="fa fa-bars" aria-hidden="true"></i></li>
+          <li>All</li>
+          <li>ShoppingRoom miniTV</li>
+          <li>Best Sellers</li>
+          <li>Mobiles</li>
+          <li>Today's Deals</li>
+          <li>Customer Service</li>
+          <li> Electronics </li>
+          <li>Prime</li>
+          <li>Fashion</li>
+          <li>SR Pay</li>
+      </ul>
+     </div> 
+     <div class="offerImage"><img src="https://m.media-amazon.com/images/G/31/Events/img23/JanART/SWM_400x39_Live_Now._CB615689570_.jpg" alt=""></div>
+     </div>
+  </div>
+</nav>
+<div class="Signinghover" id="Signinghover" onmouseenter="show()" onmouseleave="hide()">
+  <div>
+    <div class="outerBorder" onmouseenter="show()" onmouseleave="hide()">
+      <div class="sigin_section">
+        <a href="./SignIn.html" style="text-decoration: none;"><p class="si">Sign in</p></a>
+        <p>New Customer? <span style="color: #30a2b6; cursor: pointer; font-size: 12px;"><a href="./SiginUpPage.html" style="text-decoration: none; color: #30a2b6;">Start here</a> </span></p>
+      </div>
+      <div class="ul-li">
+        <ul>
+          <li><h4>Your Lists</h4></li>
+          <li>Create a Wish List</li>
+          <li>Wish from Any Website</li>
+          <li>Baby Wishlist</li>
+          <li>Discover Your Style</li>
+          <li>Explore Showroom</li>
+        </ul>
+        <ul>
+          <li><h4>Your Account</h4></li>
+          <li>Your Account</li>
+          <li>Your Orders</li>
+          <li>Your Wish List</li>
+          <li>Your Recommendations</li>
+          <li>Your Prime Membership</li>
+          <li>Your Prime Video</li>
+          <li>Your Subscribe & Save Items</li>
+          <li>Memberships & Subscriptions</li>
+          <li>Your Amazon Business Account</li>
+          <li>Your Seller Account</li>
+          <li>Manage Your Content and Devices</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
 <!-- header ends here... -->
 <section class="banner-section">
     <div class="imageslider">
@@ -226,7 +265,7 @@
                 <div class="sigin-in">
                     <div>
                         <h1>Sign in for your best experience</h1>
-                        <p>Sign in securely</p>
+                        <a href="./SignIn.html"><p>Sign in securely</p></a>
                     </div>
                 </div>
                 <div class="sponser-image">
@@ -342,14 +381,15 @@
     <section class="section-5">
     <div>
         <div class="sec-start">
-            <div class="sec-start-1">
+            <div class="sec-start-1 blockbusterDeals">
                 <h1>Blockbuster Deals</h1> 
-                <span style="">See all details</span>
+                <span style="color: #30a2b6;">See all details</span>
             </div>
 <div class="scrolling-image">
     <!-- Swiper -->
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper-1">
+    <div class="swiper mySwiper" >
+      <button class="chevon-left" id="chevon-left-5l" > <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></button>
+        <div class="swiper-wrapper-1"  id="swiper-wapper-section-5">
           <div class="swiper-slide-1">
             <img src="https://m.media-amazon.com/images/I/41WpD4fqT4L._AC_SY200_.jpg" alt="">
             <div><p>Up to 32% off</p><span>Republic Day Sale</span></div>
@@ -424,6 +464,7 @@
           </div>  
        
         </div>
+        <button class="chevon-right" id="chevon-right-5r" > <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
         <div class="swiper-scrollbar"></div>
        
       </div>
@@ -437,14 +478,18 @@
     <section class="section-6">
         <div>
             <div class="sec-start-1">
-                <div class="sec-start-2">
+                <div class="sec-start-2 starting49">
                     <h1>Starting ₹49 | Daily essentials | SR Brands & more</h1> 
-                    <span style="">See all details</span>
+                    <span style="color: #30a2b6;">See all details</span>
                 </div>
+                
     <div class="scrolling-image-1">
         <!-- Swiper -->
+        
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper-2">
+          <button class="chevon-left" id="chevon-left" > <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></button>
+            <div class="swiper-wrapper-2" id="swiper-wapper-section-6" onmouseenter="hoverOn()" onmouseleave="hoverOff()">
+              
               <div class="swiper-slide-2">
                 <img src="https://m.media-amazon.com/images/I/71hKr7k+58L._AC_SY200_.jpg" alt="">
                 <div></div>
@@ -478,7 +523,7 @@
                 
               </div>
               <div class="swiper-slide-2">
-                <img src="https://m.media-amazon.com/images/I/612ixc6y9mL._AC_SY200_.jpg" alt="">
+                <img src="https://m.media-amazon.com/images/I/612ixc6y9mL._AC_SY200_.jpg" alt="" style="width: 250px; height: 200px;">
                 
               </div>
               <div class="swiper-slide-2">
@@ -501,8 +546,9 @@
                 <img src="https://m.media-amazon.com/images/I/812q+AZIBHL._AC_SY200_.jpg" alt="">
                 
               </div>
-        
+             
             </div>
+            <button class="chevon-right" id="chevon-right" > <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
             <div class="swiper-scrollbar"></div>
     
           </div>
@@ -513,101 +559,534 @@
         </div>
     </section>
     <!-- section-6 ends -->
-    <section class="section-7">
-        <div>
-            <div class="sec-start-2">
-                <div class="sec-start-3">
-                    <h1>Up to 40% off | Daily essentials</h1> 
-                    <span style="">See all details</span>
-                </div>
-    <div class="scrolling-image-2">
-        <!-- Swiper -->
-        <div class="swiper mySwiper_1">
-            <div class="swiper-wrapper-3">
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/61xHe1Fyr0L._AC_SY200_.jpg" alt="">
-                <div></div>
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/51RcxiQNx9L._AC_SY200_.jpg" alt="">
-               
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/81TvE11exoL._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/71ls0omMj1L._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/71tYPz++3+L._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/71CcOCW2y8L._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/717WiuxL2XL._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/81acvJPczBL._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/61iQby6TUML._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/61I9XPR1jmL._AC_SY200_.jpg" alt="">
-               
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/71tH6y4K-SL._AC_SY200_.jpg" alt="">
-
-              </div>
-              <div class="swiper-slide-3">
-                <img src="" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/61JtIG+5k9L._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/61JtIG+5k9L._AC_SY200_.jpg" alt="">
-                
-              </div>
-              <div class="swiper-slide-3">
-                <img src="https://m.media-amazon.com/images/I/61JtIG+5k9L._AC_SY200_.jpg" alt="">
-                
-              </div>
-
-        
-            </div>
-            <div class="swiper-scrollbar"></div>
-    
-          </div>
-    
+        <section class="section-7">
+            <div>
+                <div class="sec-start-2">
+                    <div class="sec-start-3 upto40">
+                        <h1>Up to 40% off | Daily essentials</h1> 
+                        <span style="color: #30a2b6;">See all details</span>
+                    </div>
+        <div class="scrolling-image-2">
+            <!-- Swiper -->
+            <div class="swiper mySwiper_1">
+              <button class="chevon-left btn-7-l" id="chevon-left-7l" > <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></button>
+                <div class="swiper-wrapper-3"  id="swiper-wapper-section-7">
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/61xHe1Fyr0L._AC_SY200_.jpg" alt="" style="width: 100%; height: 100%;">
                     
                 </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/51RcxiQNx9L._AC_SY200_.jpg" alt="">
+                
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/81TvE11exoL._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/71ls0omMj1L._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/71tYPz++3+L._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/71CcOCW2y8L._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/717WiuxL2XL._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/81acvJPczBL._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/61iQby6TUML._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/61I9XPR1jmL._AC_SY200_.jpg" alt="">
+                
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/71tH6y4K-SL._AC_SY200_.jpg" alt="">
+
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/81Xzx5PHTFL._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/61JtIG+5k9L._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/61T8dZV5-cL._AC_SY200_.jpg" alt="">
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/61L-epiEFPS._AC_SY200_.jpg" alt="">
+                    
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/61uWT5siLmL._AC_SY200_.jpg" alt="">
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/715aY98VTPL._AC_SY200_.jpg" alt="">
+                </div>
+                <div class="swiper-slide-3">
+                    <img src="https://m.media-amazon.com/images/I/81hzUDhkdaL._AC_SY200_.jpg" alt="">
+                </div>
+
+            
+                </div>
+                <button class="chevon-right btn-7-r" id="chevon-right-7r" > <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+                <div class="swiper-scrollbar"></div>
+        
+            </div>
+        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- section 7 ends -->
+    <section id="section-8">
+        <div class="mobiles-section-1">
+            <div class="for-space-1">
+            <div class="mob-sec-2">
+                <div class="mob-sub-sec-2">
+                    <!-- add 4 cards along with sub-cards -->
+                    <div class="cards-1">
+                        <div><h1 style="padding-left: 20px; padding-bottom: 25px ;">
+                            Shop by brand
+                        </h1></div>
+                        <div class="sub-cards-divs">
+                          <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Samsung/JanART23/MSO/Tanya_MSOs/D68361814_INWLD_JanArt_PC_QuadCard_186x116_5._SY116_CB615718173_.jpg" alt="Redmi mobiles">
+                            <p>Savings upto &#8377 11,000</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Samsung/JanART23/MSO/Tanya_MSOs/D68361814_INWLD_JanArt_PC_QuadCard_186x116_6._SY116_CB615718173_.jpg" alt="Samsung">
+                                <p>Savings upto &#8377 11,000</p>
+                            </div>
+                            <div class="sub-cards-div-2">
+                                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Samsung/JanART23/MSO/Tanya_MSOs/D68361814_INWLD_JanArt_PC_QuadCard_186x116_7._SY116_CB615718173_.jpg" alt=""> 
+                                <p>Savings upto &#8377 18,000</p>
+                            </div>
+                            <div class="sub-cards-div-2">
+                                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Samsung/JanART23/MSO/Tanya_MSOs/D68361814_INWLD_JanArt_PC_QuadCard_186x116_8._SY116_CB615718173_.jpg" alt="">
+                                <p>Savings upto &#8377 10,000</p>
+                            </div>
+                            <p style="color: #30a2b6;">See all offers</p>
+                        </div>
+    
+                    </div>
+                    <div class="cards-1">
+                        <div><h1 style="padding-left: 20px;">
+                            Up to 75% off | Deals on top rated home products
+                        </h1></div>
+                        <div class="sub-cards-divs">
+                            <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/amazon_basics/ashaln/desktop_home/xcm_banners_home-pc-1-1_186x116_in-en._SY116_CB616003064_.jpg" alt="clothes">
+                            <p>Starting ₹660 | Comforters</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/amazon_basics/ashaln/desktop_home/xcm_banners_home-pc-2_186x116_in-en._SY116_CB615991997_.jpg" alt="Samsung">
+                                <p>Starting ₹499 | Bedsheets</p>
+                            </div>
+                            <div class="sub-cards-div-2">
+                                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/amazon_basics/ashaln/desktop_home/xcm_banners_home-pc-3_186x116_in-en._SY116_CB615991974_.jpg" alt="watches"> 
+                                <p>Up to 60% off | Storage & organization</p>
+                            </div>
+                            <div class="sub-cards-div-2">
+                                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/amazon_basics/ashaln/desktop_home/xcm_banners_home-pc-4_186x116_in-en._SY116_CB615991970_.jpg" alt="lagguage">
+                                <p>Starting ₹229 | Lighting & decor</p>
+                            </div>
+                            <p style="color: #30a2b6;">See all offers</p>
+                        </div>
+                 
+    
+                    </div>
+                    <div class="cards-1">
+                        <div><h1 style="text-align: left; padding-left: 20px;  width: 80%;">
+                            Up to 70% off | Kitchen picks from local shops
+                        </h1></div>
+                        <div class="sub-cards-divs">
+                            <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/cross-site/Kitchen_app186x116._SY116_CB615814904_.jpg" alt="Redmi mobiles">
+                            <p>Up to 45% off | Appliances</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/cross-site/Kitchen-organizers186x116._SY116_CB615814904_.jpg" alt="Samsung">
+                            <p>Up to 60% off | Organizers</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/cross-site/Dinnerset186x116._SY116_CB615814904_.jpg" alt=""> 
+                            <p>Up to 50% off | Dinner sets</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/cross-site/Cooking-utensils186x116._SY116_CB615814904_.jpg" alt="">
+                            <p>Up to 40% off | Cooking utensils</p>
+                          </div>
+                        </div>
+                        <p style="padding-left: 20px; color: #30a2b6;">See all offers</p>
+                    </div>
+                    <div class="cards-1">
+                        <div><h1 style="text-align: left; padding-left: 20px;  width: 80%;">
+                            Great Republic Day Sale | Brands in Focus
+                        </h1></div>
+                        <div class="sub-cards-divs">
+                            <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Wireless/Xiaomi/Events/JanArt/Ascent/D67877384_INWLD_JanArt_Xiaomi_Ascent_PC_QuadCard_186X116._SY116_CB616673220_.jpg" alt="Redmi mobiles">
+                            <p>Up to 40% off | Xiaomi Smartphones</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Manjula/JANART2023/D67578936_QC_1x._SY116_CB615661018_.jpg" alt="Samsung">
+                            <p>Up to 40% off on Orion</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/TVs/JanART/Samsung/PC_QuadCard_372X232_2._SY116_CB615740626_.jpg" alt=""> 
+                            <p>Up to 45% off | Series of smart TVs</p>
+                          </div>
+                          <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/JanART23/Tecno/Ascent/D67951420_IN_WLD_JanART23_Tecno_Ascent_PC_QuadCard_186X116._SY116_CB616976241_.jpg" alt="">
+                            <p>Starting ₹6,099 | Up to 47% off</p>
+                          </div>
+                        </div>
+                        <p style="padding-left: 20px; color: #30a2b6;">See all offers</p>
+                    </div>
+            </div>
             </div>
         </div>
+        </div>
     </section>
+<!-- section 8 ends here............ -->
+
+<section class="section-9">
+
+    <div class="big-banner">
+        <div class="banner-section">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img16/vineet/Amazon-Pay-Later/Jan_23/Jan_ART/1150x323_GW-editorial._CB615648357_.jpg" alt="">
+        </div>
+    </div>
+</section>
+<!-- section - 9 ends here........... -->
+
+<section class="section-10">
+    <div>
+        <div class="sec-start-3">
+            <div class="sec-start-4 greatdeals">
+                <h1>Great deals on mobiles & accessories | Starting ₹39</h1> 
+                <span style="color: #30a2b6;">See all details</span>
+            </div>
+<div class="scrolling-image-3">
+    <!-- Swiper -->
+    <div class="swiper mySwiper_2">
+      <button class="chevon-left btn-10-l" id="chevon-left-10l" > <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></button>
+        <div class="swiper-wrapper-4" id="swiper-wapper-section-10">
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_8._CB615578592_.jpg">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_2._CB615578592_.jpg" alt="">
+           
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_1._CB615578592_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_7._CB615578592_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_4._CB615578592_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_3._CB615578592_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_5._CB615578592_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_5._CB615578592_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200_6._CB615578592_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/JanART23/GW/Desktop/D68655140_IN_WLA_MSO_GW_JANART_DesktopShoveler_200x200._CB615573109_.jpg" alt="">
+           
+          </div>
+        </div>
+        <button class="chevon-right btn-7-r" id="chevon-right-10r" > <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+        <div class="swiper-scrollbar"></div>
+
+      </div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section-10 ends here............... -->
+<section class="section-11">
+
+    <div class="big-banner-1">
+        <div class="banner-section-1">
+            <img src="https://m.media-amazon.com/images/G/31/AMS/IN/970X250-_desktop_banner.jpg" alt="">
+        </div>
+    </div>
+</section>
+<!-- section - 11 ends here -->
+<section id="section-12">
+    <div class="mobiles-section-1">
+        <div class="for-space-1">
+        <div class="mob-sec-2">
+            <div class="mob-sub-sec-2">
+                <!-- add 4 cards along with sub-cards -->
+                <div class="cards-1">
+                    <div><h1 style="padding-left: 20px;">
+                        Starting ₹79 | Home, kitchen & more
+                    </h1></div>
+                    <div class="sub-cards-divs">
+                      <div class="sub-cards-div-2">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/IN/OHL/GW/JanART/Main/EVENT/PCQC/PC_QuadCard_372X232_1x_1._SY116_CB617449707_.jpg" alt="Redmi mobiles">
+                        <p>Home & Kitchen Appliances</p>
+                      </div>
+                      <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/IN/OHL/GW/JanART/Main/EVENT/PCQC/PC_QuadCard_372X232_1x_2._SY116_CB617449707_.jpg" alt="Samsung">
+                            <p>Sports & Fitness</p>
+                        </div>
+                        <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/IN/OHL/GW/JanART/Main/EVENT/PCQC/PC_QuadCard_372X232_1x_5._SY116_CB617449707_.jpg" alt=""> 
+                       <p>Home Improvement</p>
+                        </div>
+                        <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/IN/OHL/GW/JanART/Main/EVENT/PCQC/PC_QuadCard_372X232_1x_7._SY116_CB617449707_.jpg" alt="">
+                        <p>Power Tools</p>
+                        </div>
+                        <p style="color: #30a2b6;">See all offers</p>
+                    </div>
+
+                </div>
+                <div class="cards-1">
+                    <div><h1 style="text-align: left; padding-left: 20px;  width: 80%;">
+                        Starting ₹5,999 | TVs for every budget
+                    </h1></div>
+                    <div class="sub-cards-divs">
+                      <div class="sub-cards-div-2s">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/TVs/BAU/Kamya/JanART/PC_CategoryCard_758X608_3._SY304_CB615774930_.jpg" alt="">
+                       
+                      </div>
+                    </div>
+                    <p style="padding-left: 20px; color: #30a2b6;">See all offers</p>
+                </div>
+                <div class="cards-1">
+                    <div><h1 style="padding-left: 20px;">
+                        Under ₹599 | SR Brands & more
+                    </h1></div>
+                    <div class="sub-cards-divs">
+                        <div class="sub-cards-div-2">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/private_label_fashion/hariprkl/desktop/xcm_banners_2022_events_qc-186x116-product-badge-f9e9d-00ao0-a6s93_372x232_in-hi._SY116_CB615764734_.jpg" alt="clothes">
+                        <p>Men's clothing</p>
+                      </div>
+                      <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/private_label_fashion/hariprkl/desktop/xcm_banners_2022_events_qc-186x116-product-badge-f9e9d-00ao0-kaysw_372x232_in-hi._SY116_CB615764724_.jpg" alt="Samsung">
+                            <p>Women's clothing</p>
+                        </div>
+                        <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/private_label_fashion/hariprkl/desktop/xcm_banners_2022_events_qc-186x116-product-badge-f9e9d-00ao0-qjjo9_372x232_in-hi._SY116_CB615764725_.jpg" alt="watches"> 
+                            <p>Kids' clothing</p>
+                        </div>
+                        <div class="sub-cards-div-2">
+                            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/private_label_fashion/hariprkl/desktop/xcm_banners_2022_events_qc-186x116-product-badge-f9e9d-00ao0_372x232_in-hi._SY116_CB615764731_.jpg" alt="lagguage">
+                            <p>Footwear</p>
+                        </div>
+                        <p style="color: #30a2b6;">See all offers</p>
+                    </div>
+             
+
+                </div>
+                <div class="cards-1">
+                    <div><h1 style="text-align: left; padding-left: 20px;  width: 80%;">
+                        Register for free | Get business exclusive deals
+                    </h1></div>
+                    <div class="sub-cards-divs">
+                        <div class="sub-cards-div-2">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/App_janart_2022/QC_Computers_186_116_1301._SY116_CB615713373_.jpg" alt="Redmi mobiles">
+                        <p>Computers & Accessories</p>
+                      </div>
+                      <div class="sub-cards-div-2">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/App_janart_2022/QC_Electronics_186_116_1301._SY116_CB615713373_.jpg" alt="Samsung">
+                        <p>Electronics</p>
+                      </div>
+                      <div class="sub-cards-div-2">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/App_janart_2022/QC_LA_186_116_1301._SY116_CB615713373_.jpg" alt=""> 
+                        <p>Large Appliances</p>
+                      </div>
+                      <div class="sub-cards-div-2">
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/App_janart_2022/QC_Kitchen_186_116_1301._SY116_CB615713373_.jpg" alt="">
+                        <p>Kitchen essentials</p>
+                      </div>
+                    </div>
+                    <p style="padding-left: 20px; color: #30a2b6;">See all offers</p>
+                </div>
+               
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- section - 12 ends here -->
+<section class="section-13">
+    <div>
+        <div class="sec-start-3">
+            <div class="sec-start-4 upto40off">
+                <h1>Up to 40% off | Great offers on Popular Smartphones</h1> 
+                <span style="color: #30a2b6;">See all details</span>
+            </div>
+<div class="scrolling-image-3">
+    <!-- Swiper -->
+    <div class="swiper mySwiper_2">
+      <button class="chevon-left btn-13-l" id="chevon-left-13l" > <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></button>
+        <div class="swiper-wrapper-4" id="swiper-wapper-section-13">
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_7._CB615711521_.jpg">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_1._CB615711521_.jpg" alt="">
+           
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_2._CB615711521_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_3._CB615711521_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_4._CB615711521_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_5._CB615711521_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_6._CB615711521_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_7._CB615711521_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_7._CB615711521_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/MSO/Desktop/Shoveler/JANart/D68361814_INWLD_JanArt_MSO_DesktopShoveler_200x200_9._CB615711521_.jpg" alt="">
+           
+          </div>
+        </div>
+        <button class="chevon-right btn-13-r" id="chevon-right-13r" > <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+        <div class="swiper-scrollbar"></div>
+
+      </div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section - 13 ends here -->
+<section class="section-14">
+    <div>
+        <div class="sec-start-3">
+            <div class="sec-start-4 Shopdetails">
+                <h1>Shop deals in top categories</h1> 
+                <span style="color: #30a2b6;">See all details</span>
+            </div>
+<div class="scrolling-image-3">
+    <!-- Swiper -->
+    <div class="swiper mySwiper_2">
+      <button class="chevon-left btn-14-l" id="chevon-left-14l" > <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></button>
+        <div class="swiper-wrapper-4" id="swiper-wapper-section-14">
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/Meghana/JanART23/Teaser/HomePage/D68345313_INWLD_JanART-Uber_DesktopShoveler_200x200._CB617503228_.jpg">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Laptops/JanART23/DesktopShoveler_200x2001._CB617457590_.jpg" alt="">
+           
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/OHL/JanART23/200x200._CB617511932_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/DesktopShoveler_200x200._CB617568050_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/GW/JanART/DesktopShoveler_200x200-Eng._CB617567178_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img2023/test/JanART/Cons_Desktop_Shoveler_200X200._CB617361892_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/media/JanART_2023/DesktopShoveler_200x200_Media_2._CB617140214_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/PB/JANART/Rev/Desktop/Gateway/Amazonbrands_DesktopShoveler_200x200._CB617362434_.jpg" alt="">
+            
+          </div>
+          <div class="swiper-slide-4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/JANArt23PCshoveler1X/desktopshoveler_200x200_English._CB617201361_.jpg" alt="">
+            
+          </div>
+      
+        </div>
+        <button class="chevon-right btn-14-r" id="chevon-right-14r" > <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+        <div class="swiper-scrollbar"></div>
+
+      </div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section - 14 ends here -->
+<div class="signin-section">
+    <div class="signin-section-1">
+        <div>
+            <p>See personalized recommendations</p>
+   
+        </div>
+        <div class="sig-in-1">
+            <a href="./SignIn.html"><p class="sig-in">Sign in</p></a>
+        </div>
+        <div>
+            <p>New customer? <a href="./SiginUpPage.html" style="text-decoration: none; color: black;"><span style="color: #30a2b6;">Start here.</span></a></p>
+        </div>
+    </div>
+</div>
 
 </main>
 
@@ -615,7 +1094,7 @@
 
 
 <!-- footer starts from here -->
-<section class="back-to-top">Back to top</section>
+<section class="back-to-top"><a href="#">Back to top</a></section>
 <footer>
     <div class="footer-sec-1">
         <div class="footer-sec-2">
@@ -776,8 +1255,8 @@ Singapore Spain Turkey United Arab Emirates United Kingdom United States
 </div>
 </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 <script src="../scripts/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </html>
