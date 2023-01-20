@@ -168,3 +168,14 @@ function hide(){
   mouseHover.style.display="none"
   mouseHover.style.transition="all 2s"
 }
+// ----------------displayName---Next---to--hello-----------------------------------------------------------------
+let disname=localStorage.getItem("fordisplatName")||""
+let displayUserName= document.getElementById("disname")
+let display_Name=document.getElementById("displayName")
+if(disname!==""){
+  displayUserName.innerText=disname
+  display_Name.textContent=disname
+}else{
+  display_Name.textContent="sign in"
+}
+
