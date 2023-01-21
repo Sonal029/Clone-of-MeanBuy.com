@@ -47,6 +47,8 @@ let savelaterData=JSON.parse(localStorage.getItem('savelater'))||[]
 let UserData = JSON.parse(localStorage.getItem("User")) || false;
 let fordisplayingMessage= document.getElementById("disMessage")
 ///     ================================      //////////
+let displayCount=document.getElementById("displayCount")
+  displayCount.textContent=localData.length
 
 
 let toDisplayCartImage= document.getElementById("item-div")
@@ -67,7 +69,7 @@ function displayCartImage(){
            </div>
            <div style="margin-left:100px;">
                 <div >
-                    <h1 style="line-height: 2;">  Your Amazon Cart is empty</h1>
+                    <h1 style="line-height: 2;">  Your Shopping Room Cart is empty</h1>
                     <p style="color: #30a2b6;">Shop today’s deals</p>
                 </div>
                 <div style="display: flex; margin-top: 50px;">
@@ -302,5 +304,77 @@ for (i = 0; i < acc.length; i++) {
 
 }
 
-// ----------------------------
+// ===================adding to api coding========================================================
+let proceedToBuyBtn= document.getElementById("proceed-button")
 
+proceedToBuyBtn.addEventListener("click",()=>{
+ if(localData&&UserData&&disname){
+  console.log("its appending")
+  let retunedDataFromPTOBJ=passDataToOBJ(localData,UserData,disname)
+  passObjToAPI(retunedDataFromPTOBJ)
+  console.log(retunedDataFromPTOBJ);
+ }  
+
+})
+
+function passDataToOBJ(localData,UserData,disname){
+ var UserCredentials={}
+ UserCredentials.Owner=disname
+  UserData.forEach(ele=>{
+    // console.log(ele)
+   UserCredentials.Username=ele.name
+   UserCredentials.email=ele.email
+   UserCredentials.password=ele.password
+  })
+  let arr=[]
+  let i=0;
+  if(localData.length>1){
+ 
+      // console.log(ele)
+      
+      addDataToInsideObj()
+     function addDataToInsideObj(){
+      localData.forEach(ele=>{
+        while(i<localData.length){
+          let multiData={
+            productname:ele.name,
+            productPrice:ele.price,
+            productImage:ele.image
+          }
+          arr.push(multiData)
+          i++
+        }
+       
+        // arr.forEach((ele,ind)=>{
+        // //  console.log(ele,ind)
+        // })
+      })
+      }
+      UserCredentials.productPurchased=arr
+      //  console.log(arr)
+  }else{
+    localData.forEach(ele=>{
+      // console.log(ele)
+      UserCredentials.productPurchased={
+        productname:ele.name,
+        productPrice:ele.price,
+        productImage:ele.image
+      }
+      })
+  }
+  // console.log(arr)
+    // console.log(UserCredentials)
+    return UserCredentials
+}
+
+
+function passObjToAPI(retunedDataFromPTOBJ){
+fetch("https://gorgeous-teal-dress.cyclic.app/cart",{
+  method:'POST',
+ headers:{
+  "Content-Type":"application/json"
+ },
+ body: JSON.stringify(retunedDataFromPTOBJ)
+})
+
+}

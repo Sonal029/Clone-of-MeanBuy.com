@@ -179,3 +179,7 @@ if(disname!==""){
   display_Name.textContent="sign in"
 }
 
+// ===================to=show=the=quantities============================================================
+let localData=JSON.parse(localStorage.getItem('addcart'))||[]
+let displayCount=document.getElementById("displayCount")
+  displayCount.textContent=localData.length
