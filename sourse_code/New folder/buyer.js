@@ -17,7 +17,7 @@ burger.addEventListener("click", () => {
 });
 
 let tbody = document.getElementById("tbody");
-let User = JSON.parse(localStorage.getItem("cart")) || [];
+let User = JSON.parse(localStorage.getItem("allcredentials")) || [];
 
 // fetch("https://gorgeous-teal-dress.cyclic.app/order")
 //   .then((res) => res.json())
