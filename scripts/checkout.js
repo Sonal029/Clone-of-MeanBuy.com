@@ -160,7 +160,7 @@ window.location.href='cart.html'
 //     },
 //     body: JSON.stringify(retunedDataFromPTOBJ)
 //    })
-   localStorage.setItem("allcredentials",JSON.stringify(retunedDataFromPTOBJ))
+   localStorage.setItem("allcredentials",JSON.stringify([retunedDataFromPTOBJ]))
    }
 
 
@@ -215,3 +215,5 @@ addressData.forEach(elem=>{
     streat.innerHTML=elem.mobileValue
     pin.innerHTML=elem.pincodeValue
 })
+
+

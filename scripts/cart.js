@@ -433,3 +433,7 @@ for (i = 0; i < acc.length; i++) {
 
 // ----------------------------
 
+// ===================to=show=the=quantities============================================================
+// let localData=JSON.parse(localStorage.getItem('addcart'))||[]
+let displayCount=document.getElementById("displayCount")
+  displayCount.textContent=localData.length
