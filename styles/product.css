@@ -373,55 +373,6 @@ margin-left: auto;
     background-color: #171f29;
     color: #fefefe;
 }
-/* footer ends here */
-#section-3{
-    max-width: 1500px;
-
-  
-}
-.mobiles-section{
-    width: 100%;
-    margin: auto;
-    position: absolute;
-    z-index: 1;
-    top: 380px;
-    padding-bottom: 50px;  
-    max-width: 1500px;
-
-}
-.mob-sub-sec-1{
-    display: flex;
-    gap: 10px;
-}
-.cards{
-    border-radius:5px ;
-    background-color: #fefefe;
-    bottom: 100px;
-}
-.mob-sec-1{
-width: 98%;
-/* height: 100px; */
-margin-left: auto;
-margin-right: auto;
-}
-.cards>div>h1{
-padding-top: 10px;
-text-align: left;
-line-height: 1.2;
-background-color: #fefefe;
-}
-.sub-cards-div{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-    background-color: #fefefe;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius:5px ;
-}
-.sub-cards-div img{
-    width: 140px; 
-}
 .sigin-in{
     background-color: #fefefe;
     padding: 20px;
@@ -454,222 +405,6 @@ background-color: #fefefe;
     cursor: pointer;
 }
 
-/* ------------------------------------------- */
-#section-4{
-margin-top: 130px;
-    max-width: 1500px;
- 
-}
-.mobiles-section-1{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin: auto;
-    /* position: relative; */
-    padding-bottom: 50px;  
-    max-width: 1500px; 
-}
-.mob-sub-sec-2{
-    display: flex;
- 
-}
-.cards-1{
-    border-radius:5px ;
-    background-color: #fefefe;
-    bottom: 100px;
-}
-.mob-sec-2{
-width: 98%;
-/* height: 100px; */
-margin-left: auto;
-margin-right: auto;
-}
-.cards-1>div>h1{
-padding-top: 10px;
-text-align: left;
-line-height: 1.2;
-background-color: #fefefe;
-}
-.sub-cards-divs{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-    background-color: #fefefe;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius:5px ;
-}
-.sub-cards-divs img{
-    width: 140px; 
-}
-
-.sub-cards-div-2 >p{
-    width: 94%;
-    font-size: 13px;
-}
-
-.sub-cards-div-2s> img{
-height: 300px;
-width: 300px;
-}
-
-/* --------section- 5- css starts----------------------------------------- */
-.sec-start{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.swiper-wrapper-1{
-  /* display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 15.5%;
-  overflow-x: auto; */
-  display: flex;
-  column-gap: 20px;
-  position: relative;
-  transition: all 1s;
-}
-.swiper-slide-1 {
-    text-align: center;
-    background: #fff;
-   
-    /* justify-content: center;
-    align-items: center; */
-  }
-
-  .swiper-slide-1 img {
-    display: flex;
-    /* width: 100%;
-    height: 100%; */
-  
-  }
-  .blockbusterDeals{
-    display: flex;
-    }
-    .blockbusterDeals span{
-        padding-top: 18px;
-        padding-left: 20px;
-        cursor: pointer;
-    }
-/* -------------------------------------------	 */
-.sec-start-1{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.swiper-wrapper-2{
-    /* display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 14%; */
-    display: flex;
-    column-gap: 20px;
-    position: relative;
-    transition: all 1s;
-  }
-  .swiper-slide-2 img {
-    display: flex;
-    column-gap: 20px;
-  }
-  .swiper-slide-2{
-    gap: 20px;
-  }
-  .section-6{
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  .starting49{
-    display: flex;
-  }
-  .starting49 span{
-    padding-top: 18px;
-    padding-left: 20px;
-    cursor: pointer;
-  }
- /* ------------------------------------------------------------------- */
- .sec-start-2{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.swiper-wrapper-3{
-    /* display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 14%;
-    column-gap: 20px;
-    overflow-x: auto; */
-    display: flex;
-    column-gap: 20px;
-    position: relative;
-    transition: all 1s;
-    
-  }
-  .swiper-slide-3 img {
-    display: flex;
-    column-gap: 20px;
-    /* width: 100%;
-    height: 200px; */
-
-  }
-  .swiper-slide-3{
-    gap: 20px;
-  }
-  .section-7{
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  .upto40{
-    display: flex;
-  }
-  .upto40 span{
-    padding-top: 18px;
-    padding-left: 20px;
-    cursor: pointer;
-  }
-/* --------------------------------------- */
-
-.big-banner{
-    width: 85%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
-}
-/* ---------------------------------------------------- */
-
-.sec-start-3{
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.swiper-wrapper-4{
-    display: flex;
-    column-gap: 20px;
-    position: relative;
-    transition: all 1s;
-    
-  }
-  .swiper-slide-4 img {
-    display: flex;
-    column-gap: 20px;
-    /* width: 100%;
-    height: 200px; */
-
-  }
-  .swiper-slide-4{
-    gap: 20px;
-  }
-  .section-10   {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-/* ------------------------------------------------------ */
-.big-banner-1{
-    width: 75%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
-}
-/* -------------------------------------------------------------- */
-
 .signin-section-1{
     width: 80%;
     align-content: center;
@@ -692,76 +427,6 @@ width: 300px;
 text-decoration: none;
 color: black;
 }
-/* -------------------------------------------------------------- */
-.greatdeals{
-    display: flex;
-  }
-  .greatdeals span{
-    padding-top: 18px;
-    padding-left: 20px;
-    cursor: pointer;
-  }
-/* --------------------------------------------------------------------------------------- */
-.upto40off{
-    display: flex;
-  }
-  .upto40off span{
-    padding-top: 18px;
-    padding-left: 20px;
-    cursor: pointer;
-  }
-/* ---------------------------------------------------------------------------------- */
-.Shopdetails{
-    display: flex;
-  }
-.Shopdetails span{
-    padding-top: 18px;
-    padding-left: 20px;
-    cursor: pointer;
-  }
-/* ------------------------------------------------------------------------------------ */
-.chevon-left{
-position: absolute;
-flex-basis: 100%;
-justify-content: center;
-align-items: center;
-top: 25%;
-left: 0%;
-width: 40px;
-height: 100px;
-
-font-size: large;
-border: 0px solid #fefefe;
-opacity: .7;
-transition-delay: 2s;
-z-index: 1;
-}
-
-.chevon-right{
-position: absolute;
-flex-basis: 100%;
-top: 25%;
-right: 0%;
-justify-content: center;
-align-items: center;
-width: 40px;
-height: 100px;
-
-font-size: large;
-border: 0px solid #fefefe;
-opacity: .7;
-}
-/* --------------------------------------------------------------------------------------- */
-.swiper-wrapper-4{
-    /* display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 14%; */
-    display: flex;
-    column-gap: 20px;
-    position: relative;
-    transition: all 1s;
-  }
-
 /* ----------------------------------------------------------------- */
 .ul-li ul li{
     color: black;
@@ -812,72 +477,161 @@ opacity: .7;
     display: none;
     /* position: relative; */
 }
-/* ------------------------------------------------- */
+/* ----------------- shakambaricode-------------------------------- */
 
-/* .list{
-    position: absolute;
-    z-index: 5;
-    background-color: #fefefe;
-    border-radius: 0px 0px 5px 5px;
+#product_page
+{
+    display: flex;
+    margin: 5px;
 }
-.list ul{
-    list-style: none;
-
+#laptop
+{
+    color: #c45500;
 }
-.list-items{
-    padding: 12px 5px;
-} */
+#product_no
+{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 2px;
+    margin: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#star>span
+{
+    color: #eeac04;
+    font-size: 26px;
+}
+#star:hover
+{
+    color: #c45500;
+}
+#star
+{
+    font: small
+}
+#price>div:hover
+{
+    color: #c45500;
+}
+#max
+{
+    width: 50px;
+    height: 20px;
+}
+#min
+{
+    width: 50px;
+    height: 20px;
+}
+#go_btn
+{
+    padding: 7px 5px;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+#deliverbyday>input:hover
+{
+     color: #c45500;
+}
+#product_card
+{
+    /* border: 1px solid red; */
+    display: flex;
+    padding: 40px;
+     height: auto;
+     border: 1px solid #f0ecec;
+     margin: 3px;
+     border-radius: 5px;
+     width: 900px;
+}
+ #filter_bar
+ {
+    width: 200px;
+ }
+ #sale
+ {
+    background-color: #cc0c39;
+    padding: 3px;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    color: black;
+    
+ }
+ #product_image
+ {
+    width: 370px;
+    height: 220px;
+    padding-left: 15px;
+    padding-top: 15px;
+    /* margin: 5px; */
+     /* border: 1px solid black; */
+    background-color: #f8f8f8; 
+    border-radius: 5px;
+ }
+ #product_image>img
+ {
+    width: 300px;
+    align-items: center;
+    padding-left: 30px;
+    height: 200px;
+ }
+ #price>span
+ {
+      font-size: xx-small;
+ }
+ #price
+ {
+    font-size: larger;
+ }
+ #alexa:hover
+ {
+    color: #c45500;
+ }
+ #time>span
+ {
+    font-weight: bolder;
+ }
+ #product_no
+ {
+    display: flex;
+    justify-content: space-between;
+ }
+ #product_card
+ {
+    height: auto;
+ }
 
+  /* pagination */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-	 
-
-
-
-
-
-
-
-
-
-
-
-
+  #pagination-wrapper
+ {
+    text-align: center;
+    width: 600px;
+    height: 50px;
+    margin: auto;
+ }
+ #pagination-wrapper button{
+    padding: 8px 25px;
+    border: none;
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+   cursor: pointer;
+ }
+ #product_desc{
+    padding-left: 120px;
+ }
+ .pagination{
+    margin-top: 50px;
+    border: 1px solid white;
+    width:40%;
+    text-align: center;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+ }
+ /* =============================shakambari code ends======================================================== */
 

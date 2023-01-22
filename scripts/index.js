@@ -183,3 +183,93 @@ if(disname!==""){
 let localData=JSON.parse(localStorage.getItem('addcart'))||[]
 let displayCount=document.getElementById("displayCount")
   displayCount.textContent=localData.length
+
+
+// ============================Search==Functionality=======================================================================================================
+
+let productData = JSON.parse(localStorage.getItem("prod_display"))||[]
+
+let suggestionData=["mobiles","shoes","tempered glass","headphones","laptops","motor","simcar tray", "keyboard","samsung","hp laptop","hp", "earphone",
+"monitor", "mouse", "laptopscreen","clothes", "shirt", "dress", "pant","adidas","puma","sandals","Ram", "hardisk","photo frame","camera","Apple","hp","lenovo","frontdesk",
+"cup","light","bulb","speaker","Redmi","Oppo","Realme","MI","tubelight","hanger","rope","webcamera","mobilesphone"]
+
+
+let sortedSuggestionData=suggestionData.sort();
+console.log(sortedSuggestionData)
+console.log("its working")
+let input=document.getElementById("input-bar")
+
+input.addEventListener("keyup",(e)=>{
+  console.log("input part is working")
+  for(let i of sortedSuggestionData){
+    removeElements();
+    console.log(i)
+    if(i.toLowerCase().startsWith(input.value.toLowerCase())&&input.value!=""){
+      let listItem =document.createElement("li")
+      listItem.classList.add("list-items")
+      listItem.style.cursor="pointer"
+      listItem.setAttribute("onclick","displaynames('"+ i + "')")
+      let word =  '<b>'+i.substring(0, input.value.length)+'</br>'
+      word+=i.substring(input.value.length)
+      listItem.innerHTML=word;
+      document.querySelector(".list").appendChild(listItem) 
+    }
+  }
+})
+
+function displayname(value){
+  input.value=value;
+}
+
+function removeElements(){
+  let items =document.querySelectorAll(".list-items");
+  items.forEach((item)=>{
+    item.remove();
+  })
+}
+// ========================logOut functionality============================================================
+let logoutbtn= document.getElementById("logout")
+let addressData=JSON.parse(localStorage.getItem('address'))||[]
+let gData=JSON.parse(localStorage.getItem('checkdata'))||[]
+let savelaterData=JSON.parse(localStorage.getItem('savelater'))||[]
+let UserData = JSON.parse(localStorage.getItem("User")) || false;
+var locstrg=JSON.parse(localStorage.getItem("allUserDatas"))
+var userDataArr=[];
+
+logoutbtn.addEventListener("click",()=>{
+  console.log("logout button is working")
+  var allUserData={
+    owner:disname,
+    fordisplayingNames:disname,
+    localDatas:localData,
+    productDatas:productData,
+    useraddress:addressData,
+    checkoutData:gData,
+    savelater:savelaterData,
+    userloginCredentials:UserData
+
+  }
+
+  userDataArr.push(allUserData)
+
+console.log(userDataArr)
+  // console.log(allUserData.productDatas)
+ localStorage.setItem("allUserDatas",JSON.stringify(userDataArr))
+refreshData(locstrg)
+
+})
+
+function refreshData(locstrg){
+ if(locstrg){
+  window.localStorage.removeItem('fordisplatName');
+  window.localStorage.removeItem('addcart');
+  window.localStorage.removeItem('address');
+  window.localStorage.removeItem('checkdata');
+  window.localStorage.removeItem('prod_display');
+  window.localStorage.removeItem('savelater');
+  window.location.href="./index.html"
+ }
+}
+
+
+
